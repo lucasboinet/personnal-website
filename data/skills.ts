@@ -1,0 +1,18 @@
+export default [
+  "VueJS",
+  "React",
+  "Next.js",
+  "Nuxt",
+  "Tailwind css",
+  "Typescript",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Postgres",
+  "Docker",
+  "HTML",
+  "CSS",
+  "Git",
+  "CI/CD",
+  "Anglais (C1)",
+];
