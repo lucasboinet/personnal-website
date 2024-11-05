@@ -2,7 +2,17 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'vue3-carousel-nuxt', 'nuxt-aos'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'vue3-carousel-nuxt',
+    'nuxt-aos',
+    '@nuxt/fonts'
+  ],
+  fonts: {
+    families: [
+      { name: 'Poppins', provider: 'google' }
+    ]
+  },
   tailwindcss: {
     config: {
       theme: {

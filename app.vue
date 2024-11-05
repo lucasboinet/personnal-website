@@ -1,7 +1,7 @@
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <BreakpointsDebugger />
+    <!-- <BreakpointsDebugger /> -->
     <div class="max-w-[1400px] mx-auto flex flex-col relative">
       <Navbar />
       <Hero class="mt-24 xl:mb-16" />
