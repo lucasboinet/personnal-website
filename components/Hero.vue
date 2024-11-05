@@ -33,12 +33,12 @@
                 <div class="flex flex-col gap-4">
                     <div class="flex flex-row items-center gap-2">
                         <CheckCircleIcon class="size-5 text-primary" />
-                        <span class="text-secondary leading-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        <span class="text-secondary leading-none">Expert Informatique et Systèmes d'Informations.</span>
                     </div>
 
                     <div class="flex flex-row items-center gap-2">
                         <CheckCircleIcon class="size-5 text-primary" />
-                        <span class="text-secondary leading-none">Lorem ipsum dolor sit amet.</span>
+                        <span class="text-secondary leading-none">Mes compétences au service de vos projets.</span>
                     </div>
                 </div>
             </div>
