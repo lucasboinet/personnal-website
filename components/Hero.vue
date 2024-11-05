@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col lg:flex-row items-start justify-center gap-20 w-full px-20">
+    <div class="flex flex-col lg:flex-row items-start justify-center gap-20 w-full px-5 sm:px-10 md:px-20">
         <div class="flex flex-col justify-start items-start gap-3 lg:w-[55%]" data-aos="fade-up" data-aos-delay="300">
             <div class="flex flex-row items-center gap-2 bg-primary bg-opacity-[.08] text-primary rounded-lg px-3 py-[10px]">
                 <CheckCircleIcon class="size-4" />

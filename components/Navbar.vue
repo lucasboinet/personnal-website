@@ -2,7 +2,7 @@
   <div class="flex flex-row items-center justify-between p-6 sticky top-0 w-full z-40 bg-gradient-to-t from-[#00161600] to-[#001616]">
     <img :src="logo" class="size-10">
 
-    <ul class="flex flex-row gap-12 list-none items-center text-white-alt">
+    <ul class="hidden md:flex flex-row gap-12 list-none items-center text-white-alt">
       <li><a href="#contact">Contact</a></li>
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#projets">Projets</a></li>

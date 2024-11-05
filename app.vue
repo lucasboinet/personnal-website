@@ -24,7 +24,7 @@ import Lenis from 'lenis'
 import { onMounted } from 'vue';
 
 useHead({
-  title: 'Lucas Boinet - Freelance',
+  title: 'Lucas Boinet - Développeur full-stack freelance',
   meta: [
     { name: 'description', content: "Développeur full-stack freelance à Lyon, création de sites web, développement d'applications, et solutions sur mesure." }
   ],

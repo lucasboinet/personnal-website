@@ -1,12 +1,12 @@
 <template>
     <div id="contact" class="px-10" data-aos="fade-up">
-        <div class="flex flex-row justify-between items-center gap-[51px] px-[38px] py-7 bg-white-alt bg-opacity-5 rounded-2xl max-w-[1048px] mx-auto">
+        <div class="flex flex-col lg:flex-row justify-between md:items-center gap-[51px] px-[38px] py-7 bg-white-alt bg-opacity-5 rounded-2xl max-w-[1048px] mx-auto">
             <div class="flex flex-col text-white-alt gap-3">
                 <h3 class="text-[32px] font-bold">Contactez moi</h3>
                 <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus, felis ac iaculis blandit, nisi libero cursus mauris, non pharetra sapien mi a velit. Proin at justo posuere felis feugiat hendrerit non eget leo.</p>
             </div>
 
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col md:flex-row lg:flex-col gap-6">
                 <div 
                     v-for="link in links" 
                     :key="link.text"

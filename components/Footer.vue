@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col" data-aos="fade-up" data-aos-delay="50">
-        <div class="bg-secondary p-20 w-full flex flex-col gap-10 lg:flex-row items-start justify-between">
+        <div class="bg-secondary p-20 w-full rounded-t-xl flex flex-col gap-10 lg:flex-row items-start justify-between">
             <div class="flex flex-col gap-2">
                 <img :src="footerLogo" class="size-10" />
                 <span class="mb-5 text-white-alt font-bold text-2xl">Lucas Boinet</span>
