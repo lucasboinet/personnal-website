@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div class="bg-primary text-background-dark flex flex-col md:flex-row justify-between items-center px-20 py-5 text-sm">
+        <div class="bg-primary bg-opacity-70 text-background-dark flex flex-col md:flex-row justify-between items-center px-20 py-5 text-sm">
             <span>© {{ new Date().getFullYear() }} Lucas Boinet, All rights reserved.</span>
 
             <a href="#" class="hover:underline">Conditions générales de vente</a>
