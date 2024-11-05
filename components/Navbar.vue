@@ -8,7 +8,7 @@
       <li><a href="#projets">Projets</a></li>
     </ul>
 
-    <a href="#contact">
+    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ234fMyOY_JaOSjYoFVPK8gGHv5esLaX_6TrvRf8B1bq_uDhBoy4Su1eBXMDhZcZMXenB2-_E_9" target="_blank">
       <button type="button" class="bg-primary text-white-alt rounded-lg px-8 py-3 text-xs font-medium">Reserver un appel</button>
     </a>
   </div>
