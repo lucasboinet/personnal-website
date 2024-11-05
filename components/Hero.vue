@@ -6,7 +6,9 @@
                 <span>Une vraie expertise web au service de vos projets !</span>
             </div>
             <h1 class="text-white-alt text-5xl font-bold mb-10 leading-[80px]">Lucas Boinet, Développeur full-stack freelance</h1>
-            <button type="button" class="bg-primary text-white-alt rounded-lg px-12 py-3 text-xs font-medium">Me contacter</button>
+            <a href="#clients">
+                <button type="button" class="bg-primary text-white-alt rounded-lg px-12 py-3 text-xs font-medium">Me contacter</button>
+            </a>
         </div>
 
         <div class="relative hidden lg:block w-[45%]">
