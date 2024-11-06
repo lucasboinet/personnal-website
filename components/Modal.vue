@@ -1,12 +1,14 @@
 <template>
   <div 
     v-if="open" 
+    data-lenis-prevent
     class="fixed top-0 left-0 inset-0 bg-black bg-opacity-0 flex justify-center items-center z-50 p-10 overflow-auto"
     :class="{ 'animate-background': open }"
     @click.self="$emit('close')"
   >
-    <div class="bg-secondary absolute top-20 p-5 rounded-xl" :class="{ 'animate-modal': open }">
+    <div class="bg-secondary mt-20 p-5 rounded-xl" :class="{ 'animate-modal': open }">
       <slot />
+      <div class="text-primary underline text-center w-full mt-8 text-sm cursor-pointer" @click="$emit('close')">Fermer</div>
     </div>
   </div>
 </template>
