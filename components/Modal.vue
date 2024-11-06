@@ -1,11 +1,11 @@
 <template>
   <div 
     v-if="open" 
-    class="fixed top-20 lg:top-0 left-0 inset-0 bg-black bg-opacity-0 flex justify-center items-center p-10 overflow-auto"
+    class="fixed top-0 left-0 inset-0 bg-black bg-opacity-0 flex justify-center items-center z-50 p-10 overflow-auto"
     :class="{ 'animate-background': open }"
     @click.self="$emit('close')"
   >
-    <div class="bg-secondary p-5 rounded-xl" :class="{ 'animate-modal': open }">
+    <div class="bg-secondary absolute top-20 p-5 rounded-xl" :class="{ 'animate-modal': open }">
       <slot />
     </div>
   </div>
