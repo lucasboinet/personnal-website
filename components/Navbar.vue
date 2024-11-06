@@ -9,7 +9,7 @@
     </ul>
 
     <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ234fMyOY_JaOSjYoFVPK8gGHv5esLaX_6TrvRf8B1bq_uDhBoy4Su1eBXMDhZcZMXenB2-_E_9" target="_blank">
-      <button type="button" class="bg-primary text-white-alt rounded-lg px-8 py-3 text-xs font-medium">Planifier un appel</button>
+      <button type="button" class="bg-primary text-white-alt rounded-lg px-4 sm:px-8 py-2 sm:py-3 text-xs font-medium">Planifier un appel</button>
     </a>
   </div>
 </template>
