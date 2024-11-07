@@ -14,7 +14,7 @@
         <div class="flex flex-col gap-4" data-aos="fade-up" data-aos-delay="250">
             <h5 class="text-primary font-bold text-[32px]">Développement d'applications web</h5>
             <p class="mb-4 text-white-alt text-sm">
-                Passionné et autodidacte depuis l’âge de 12 ans, j’ai acquis 3 ans d’expérience professionnelle en travaillant sur des technologies telles que Nuxt, Next, Vue et Node, dans des secteurs variés comme <strong>le cloud</strong> et <strong>l’hôtellerie</strong>.
+                Passionné, autodidacte depuis l’âge de 12 ans et diplomé d'un master Expert Informatique et Systèmes d'Informations, j’ai acquis 3 ans d’expérience professionnelle en travaillant sur des technologies telles que Nuxt, Next, Vue et Node, dans des secteurs variés comme <strong>le cloud</strong> et <strong>l’hôtellerie</strong>.
                 <br><br>
                 <strong>Mon objectif en tant que développeur est de garantir un code de qualité, évolutif, et optimisé afin de : </strong>
                 <br>
