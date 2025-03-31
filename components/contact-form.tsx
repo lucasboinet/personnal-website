@@ -93,7 +93,7 @@ export default function ContactForm() {
           )}
         />
 
-        <Button type="submit" size="lg" className="w-full" disabled={isPending}>
+        <Button type="submit" size="lg" className="w-full cursor-pointer" disabled={isPending}>
           {!isPending && 'Envoyer le Message'}
           {isPending && (
             <>

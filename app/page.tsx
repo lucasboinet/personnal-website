@@ -34,20 +34,11 @@ const projects: any[] = [
 ]
 
 export default function LandingPage() {
-  const [darkMode, setDarkMode] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { scrollYProgress } = useScroll()
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.9])
   const ref = useRef(null)
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-  }, [darkMode])
 
   const fadeInUp = {
     initial: { y: 60, opacity: 0 },
@@ -59,9 +50,9 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-50 transition-colors duration-300">
+    <div className="min-h-screen bg-white text-gray-900 transition-colors duration-300">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -83,15 +74,9 @@ export default function LandingPage() {
               <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
                 Contact
               </Link>
-              <Button onClick={() => setDarkMode(!darkMode)} variant="ghost" size="icon" className="ml-2">
-                {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              </Button>
             </nav>
 
             <div className="flex md:hidden">
-              <Button onClick={() => setDarkMode(!darkMode)} variant="ghost" size="icon" className="mr-2">
-                {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              </Button>
               <Button onClick={() => setMobileMenuOpen(true)} variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
               </Button>
@@ -102,7 +87,7 @@ export default function LandingPage() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-white dark:bg-gray-950 p-4 flex flex-col">
+        <div className="fixed inset-0 z-50 bg-white p-4 flex flex-col">
           <div className="flex justify-end">
             <Button onClick={() => setMobileMenuOpen(false)} variant="ghost" size="icon">
               <X className="h-6 w-6" />
@@ -165,7 +150,7 @@ export default function LandingPage() {
                 </span>
               </motion.h1>
               <motion.p
-                className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10"
+                className="text-xl md:text-2xl text-gray-600 mb-10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -181,7 +166,7 @@ export default function LandingPage() {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button asChild size="lg" className="rounded-full px-8">
-                  <Link href="#contact">Discutons de Votre Projet</Link>
+                  <Link href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ234fMyOY_JaOSjYoFVPK8gGHv5esLaX_6TrvRf8B1bq_uDhBoy4Su1eBXMDhZcZMXenB2-_E_9" target="_blank">Discutons de Votre Projet</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-full px-8">
                   <Link href="#portfolio">Voir Mon Travail</Link>
@@ -194,7 +179,7 @@ export default function LandingPage() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1 }}
               >
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+                <span className="text-sm text-gray-600">
                   +3 ans d'expérience en développement web
                 </span>
               </motion.div>
@@ -216,6 +201,7 @@ export default function LandingPage() {
                         alt="Portrait du développeur"
                         width={600}
                         height={600}
+                        priority
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-60"></div>
@@ -247,7 +233,7 @@ export default function LandingPage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900">
+      <section id="services" className="py-20 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-3xl mx-auto text-center mb-16"
@@ -257,7 +243,7 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Mes Services</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <p className="text-lg text-gray-600">
               Des solutions numériques complètes pour répondre à tous vos besoins en ligne.
             </p>
           </motion.div>
@@ -278,7 +264,7 @@ export default function LandingPage() {
                   <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                     Création de Sites Web
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
+                  <p className="text-gray-600 mb-6 flex-grow">
                     Des sites web modernes, réactifs et optimisés pour les moteurs de recherche qui captent
                     l&apos;attention de votre audience.
                   </p>
@@ -302,7 +288,7 @@ export default function LandingPage() {
                   <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                     Applications Web
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow">
+                  <p className="text-gray-600 mb-6 flex-grow">
                     Des applications web sur mesure avec des interfaces intuitives et des fonctionnalités avancées pour
                     optimiser vos processus.
                   </p>
@@ -334,8 +320,8 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Projets Récents</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              Découvrez une sélection de mes travaux récents qui démontrent mon expertise et ma créativité.
+            <p className="text-lg text-gray-600">
+              Découvrez une sélection de mes travaux récents.
             </p>
           </motion.div>
 
@@ -373,7 +359,7 @@ export default function LandingPage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900">
+      <section id="about" className="py-20 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -403,19 +389,19 @@ export default function LandingPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">À Propos de Moi</h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              <p className="text-lg text-gray-600">
                 Bonjour, je suis un développeur web freelance passionné par la création d'applications web. Avec plus de 3 ans d&apos;expérience dans le développement web, je m&apos;efforce de combiner mon savoir-faire pour donner vie à vos projets.
               </p>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+              <p className="text-lg text-gray-600">
                 Ma mission est de transformer vos idées en solutions performantes qui non seulement répondent
                 à vos besoins, mais dépassent également vos attentes. Je travaille en étroite collaboration avec mes
                 clients pour comprendre leurs objectifs et créer des produits qui les aident à réussir.
               </p>
 
-              <div className="grid grid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-2 gap-6 my-8">
                 <div>
                   <h3 className="text-xl font-bold mb-3">Technologies Front-end</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                  <ul className="space-y-2 text-gray-600">
                     <li>React / Next.js</li>
                     <li>Vue.js / Nuxt.js</li>
                     <li>HTML5 / CSS3 / SASS</li>
@@ -425,7 +411,7 @@ export default function LandingPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-3">Technologies Back-end</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                  <ul className="space-y-2 text-gray-600">
                     <li>Node.js / Express</li>
                     <li>PHP / Laravel</li>
                     <li>MongoDB / MySQL / Redis / PostgreSQL</li>
@@ -440,10 +426,10 @@ export default function LandingPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 md:py-32">
+      <section id="contact" className="py-20 md:py-32" >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-3xl mx-auto text-center mb-16"
@@ -453,7 +439,7 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Discutons de Votre Projet</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <p className="text-lg text-gray-600">
               Prêt à donner vie à votre projet ? Contactez-moi pour discuter de vos besoins et découvrir comment je peux
               vous aider.
             </p>
@@ -473,17 +459,17 @@ export default function LandingPage() {
             </Card>
           </motion.div>
         </div>
-      </section>
+      </section >
 
       {/* Footer */}
-      <footer className="py-12 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      <footer className="py-12 bg-gray-50 border-t border-gray-200" >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
               <Link href="/" className="flex items-center space-x-2">
                 <span className="font-bold text-xl">Lucas Boinet</span>
               </Link>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Développeur web freelance</p>
+              <p className="mt-2 text-sm text-gray-600">Développeur web freelance</p>
             </div>
 
             <div className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8">
@@ -502,25 +488,25 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+          <div className="mt-8 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-sm text-gray-600">
               &copy; {new Date().getFullYear()} Lucas Boinet. Tous droits réservés.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
-              <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+              {/* <Link href="#" className="text-gray-600 hover:text-primary transition-colors">
                 Twitter
-              </Link>
-              <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+              </Link> */}
+              <Link href="https://www.linkedin.com/in/lucas-boinet/" className="text-gray-600 hover:text-primary transition-colors">
                 LinkedIn
               </Link>
-              <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+              <Link href="https://github.com/lucasboinet" className="text-gray-600 hover:text-primary transition-colors">
                 GitHub
               </Link>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </footer >
+    </div >
   )
 }
 
