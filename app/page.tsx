@@ -120,10 +120,7 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="relative mb-6">
-                <div className="absolute -left-2 top-0 w-12 h-1 bg-primary"></div>
-                <h3 className="text-xl font-medium text-primary ml-4">Développeur Web Freelance</h3>
-              </div>
+              <h3 className="text-xl font-medium text-primary mb-6">Développeur Web Freelance</h3>
               <motion.h1
                 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-6"
                 initial={{ opacity: 0, y: 20 }}
@@ -269,11 +266,10 @@ export default function LandingPage() {
                     l&apos;attention de votre audience.
                   </p>
                   <div className="flex flex-row flex-wrap items-center gap-2 text-xs">
-                    <span className="bg-primary text-secondary rounded-full px-2 py-1">Webflow</span>
-                    <span className="bg-primary text-secondary rounded-full px-2 py-1">HTML</span>
-                    <span className="bg-primary text-secondary rounded-full px-2 py-1">CSS</span>
-                    <span className="bg-primary text-secondary rounded-full px-2 py-1">Javascript</span>
+                    <span className="bg-primary text-secondary rounded-full px-2 py-1">Site vitrine</span>
                     <span className="bg-primary text-secondary rounded-full px-2 py-1">E-commerce</span>
+                    <span className="bg-primary text-secondary rounded-full px-2 py-1">SEO</span>
+                    <span className="bg-primary text-secondary rounded-full px-2 py-1">Clé en main</span>
                   </div>
                 </CardContent>
               </Card>
