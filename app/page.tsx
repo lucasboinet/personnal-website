@@ -8,6 +8,7 @@ import { ArrowRight, Code, Globe, Laptop, Menu, Moon, Sun, X } from "lucide-reac
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import ContactForm from "@/components/contact-form"
+import Header from "@/components/header"
 
 const projects: any[] = [
   {
@@ -52,67 +53,11 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white text-gray-900 transition-colors duration-300">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <Link href="/" className="flex items-center space-x-2">
-                <span className="font-bold text-xl">Lucas Boinet</span>
-              </Link>
-            </div>
-
-            <nav className="hidden md:flex items-center space-x-8">
-              <Link href="#services" className="text-sm font-medium hover:text-primary transition-colors">
-                Services
-              </Link>
-              <Link href="#portfolio" className="text-sm font-medium hover:text-primary transition-colors">
-                Portfolio
-              </Link>
-              <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
-                À Propos
-              </Link>
-              <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-                Contact
-              </Link>
-            </nav>
-
-            <div className="flex md:hidden">
-              <Button onClick={() => setMobileMenuOpen(true)} variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-white p-4 flex flex-col">
-          <div className="flex justify-end">
-            <Button onClick={() => setMobileMenuOpen(false)} variant="ghost" size="icon">
-              <X className="h-6 w-6" />
-            </Button>
-          </div>
-          <nav className="flex flex-col items-center justify-center flex-1 space-y-8">
-            <Link href="#services" className="text-2xl font-medium" onClick={() => setMobileMenuOpen(false)}>
-              Services
-            </Link>
-            <Link href="#portfolio" className="text-2xl font-medium" onClick={() => setMobileMenuOpen(false)}>
-              Portfolio
-            </Link>
-            <Link href="#about" className="text-2xl font-medium" onClick={() => setMobileMenuOpen(false)}>
-              À Propos
-            </Link>
-            <Link href="#contact" className="text-2xl font-medium" onClick={() => setMobileMenuOpen(false)}>
-              Contact
-            </Link>
-          </nav>
-        </div>
-      )}
+      <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="relative min-h-[90vh] flex items-center pt-16 overflow-hidden">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               className="order-2 lg:order-1"
@@ -120,7 +65,7 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-xl font-medium text-primary mb-6">Développeur web & créateur d'Applications freelance</h1>
+              <h1 className="text-xl font-medium text-primary mb-6 pl-1">Développeur web & créateur d'Applications freelance</h1>
               <motion.span
                 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-6"
                 initial={{ opacity: 0, y: 20 }}
@@ -189,7 +134,7 @@ export default function LandingPage() {
             >
               <div className="relative">
                 {/* Main image with clip path */}
-                <div className="relative z-10 w-full max-w-md mx-auto overflow-hidden">
+                <div className="relative z-10 w-full max-w-md mx-auto lg:mx-0 lg:ml-auto overflow-hidden">
                   <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 p-2">
                     <div className="w-full h-full rounded-xl overflow-hidden relative">
                       <Image
@@ -206,8 +151,8 @@ export default function LandingPage() {
                 </div>
 
                 {/* Decorative elements */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md aspect-square border-2 border-dashed border-primary/30 rounded-2xl -rotate-6"></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md aspect-square border-2 border-primary/20 rounded-2xl rotate-6"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 right-[unset] lg:-translate-x-0 lg:left-[unset] lg:right-0 -translate-y-1/2 w-full max-w-md aspect-square border-2 border-dashed border-primary/30 rounded-2xl -rotate-6"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 right-[unset] lg:-translate-x-0 lg:left-[unset] lg:right-0 -translate-y-1/2 w-full max-w-md aspect-square border-2 border-primary/20 rounded-2xl rotate-6"></div>
               </div>
             </motion.div>
           </div>
