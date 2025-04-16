@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const metadataTitle = "Lucas Boinet - Développeur full-stack freelance";
+const metadataTitle = "Lucas Boinet | Développeur web full-stack applications & sites web";
 const metadataDescription =
-  "Développeur full-stack freelance à Lyon, création de sites web, développement d'applications, et solutions sur mesure.";
+  "Développeur full-stack freelance à Lyon en création de sites web, développement d'applications, SEO et solutions sur mesure adaptées a vos besoins.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lucasboinet.fr"),
