@@ -462,6 +462,13 @@ export default function LandingPage() {
                 <span className="font-bold text-xl">Lucas Boinet</span>
               </Link>
               <p className="mt-2 text-sm text-gray-600">Développeur web freelance</p>
+
+              <div className="space-x-2 text-xs mt-4">
+                <span>Collaboration:</span>
+                <a href="https://www.hugoboinet.com" className="underline underline-offset-2" target="_blank" rel="noopener noreferrer">
+                  Hugo Boinet - Graphiste freelance
+                </a>
+              </div>
             </div>
 
             <div className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8">
