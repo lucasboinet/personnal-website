@@ -120,8 +120,8 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-xl font-medium text-primary mb-6">Développeur Web Freelance</h3>
-              <motion.h1
+              <h1 className="text-xl font-medium text-primary mb-6">Développeur web & créateur d'Applications freelance</h1>
+              <motion.span
                 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -145,17 +145,16 @@ export default function LandingPage() {
                     />
                   </svg>
                 </span>
-              </motion.h1>
-              <motion.p
-                className="text-xl md:text-2xl text-gray-600 mb-10"
+              </motion.span>
+              <motion.h2
+                className="text-xl md:text-2xl text-gray-600 mb-10 mt-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Je transforme vos <span className="font-semibold">idées</span> en expériences web{" "}
-                <span className="font-semibold">exceptionnelles</span>, alliant créativité et fonctionnalité pour donner
-                vie à votre vision numérique.
-              </motion.p>
+                Création d'applications web et de sites internet <span className="font-semibold">sur mesure, modernes et performants</span>
+
+              </motion.h2>
               <motion.div
                 className="flex flex-col sm:flex-row items-start gap-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -239,8 +238,8 @@ export default function LandingPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Mes Services</h2>
-            <p className="text-lg text-gray-600">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Mes services de développement web sur mesure</h2>
+            <p className="text-lg text-gray-600 my-8">
               Des solutions numériques complètes pour répondre à tous vos besoins en ligne.
             </p>
           </motion.div>
@@ -253,7 +252,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
           >
             <motion.div variants={fadeInUp}>
-              <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+              <Card className="py-0 border-none shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
                 <CardContent className="p-6 flex flex-col h-full">
                   <div className="mb-6 p-3 bg-primary/10 rounded-full w-fit">
                     <Globe className="h-6 w-6 text-primary" />
@@ -262,10 +261,9 @@ export default function LandingPage() {
                     Création de Sites Web
                   </h3>
                   <p className="text-gray-600 mb-6 flex-grow">
-                    Des sites web modernes, réactifs et optimisés pour les moteurs de recherche qui captent
-                    l&apos;attention de votre audience.
+                    Que ce soit pour un site vitrine, un portfolio ou un site d'entreprise, je m'adapte à vos besoins pour créer une interface intuitive, rapide et entièrement personnalisée. <br /><br /> Chaque site est pensé pour offrir la meilleure expérience utilisateur et valoriser votre image en ligne.
                   </p>
-                  <div className="flex flex-row flex-wrap items-center gap-2 text-xs">
+                  <div className="flex flex-row flex-wrap items-center gap-2 text-xs mt-4">
                     <span className="bg-primary text-secondary rounded-full px-2 py-1">Site vitrine</span>
                     <span className="bg-primary text-secondary rounded-full px-2 py-1">E-commerce</span>
                     <span className="bg-primary text-secondary rounded-full px-2 py-1">SEO</span>
@@ -276,7 +274,7 @@ export default function LandingPage() {
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+              <Card className="py-0 border-none shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
                 <CardContent className="p-6 flex flex-col h-full">
                   <div className="mb-6 p-3 bg-primary/10 rounded-full w-fit">
                     <Laptop className="h-6 w-6 text-primary" />
@@ -285,10 +283,9 @@ export default function LandingPage() {
                     Applications Web
                   </h3>
                   <p className="text-gray-600 mb-6 flex-grow">
-                    Des applications web sur mesure avec des interfaces intuitives et des fonctionnalités avancées pour
-                    optimiser vos processus.
+                    Que vous ayez besoin d'un outil métier, d'un espace client personnalisé ou d'une plateforme interactive, je conçois des solutions techniques fiables, sécurisées et performantes. <br /><br /> Mon objectif : vous fournir une application web parfaitement intégrée à votre workflow et facile à faire évoluer.
                   </p>
-                  <div className="flex flex-row flex-wrap items-center gap-2 text-xs">
+                  <div className="flex flex-row flex-wrap items-center gap-2 text-xs mt-4">
                     <span className="bg-primary text-secondary rounded-full px-2 py-1">Vue</span>
                     <span className="bg-primary text-secondary rounded-full px-2 py-1">React</span>
                     <span className="bg-primary text-secondary rounded-full px-2 py-1">Next.js</span>
@@ -315,7 +312,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Projets Récents</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ils m'ont fait confiance</h2>
             <p className="text-lg text-gray-600">
               Découvrez une sélection de mes travaux récents.
             </p>
@@ -365,15 +362,13 @@ export default function LandingPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="relative z-10 rounded-lg overflow-hidden shadow-xl">
-                <Image
-                  src="/profile-image-big.jpeg"
-                  alt="Portrait du développeur"
-                  width={600}
-                  height={800}
-                  className="w-full h-auto"
-                />
-              </div>
+              <Image
+                src="/profile-image-big.jpeg"
+                alt="Portrait du développeur"
+                width={600}
+                height={800}
+                className="h-[80vh] w-full object-cover relative z-10 rounded-lg shadow-lg"
+              />
               <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-primary/20 rounded-full blur-2xl -z-10" />
               <div className="absolute -top-6 -left-6 w-48 h-48 bg-primary/10 rounded-full blur-xl -z-10" />
             </motion.div>
@@ -384,14 +379,15 @@ export default function LandingPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">À Propos de Moi</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">À propos de moi</h2>
               <p className="text-lg text-gray-600">
-                Bonjour, je suis un développeur web freelance passionné par la création d'applications web. Avec plus de 3 ans d&apos;expérience dans le développement web, je m&apos;efforce de combiner mon savoir-faire pour donner vie à vos projets.
+                Bonjour, je suis un <span className="font-semibold">développeur web freelance</span> passionné par la création d'applications web. Avec plus de 3 ans d&apos;expérience dans le développement web, je m&apos;efforce de combiner mon savoir-faire pour donner vie à vos projets.
               </p>
-              <p className="text-lg text-gray-600">
-                Ma mission est de transformer vos idées en solutions performantes qui non seulement répondent
-                à vos besoins, mais dépassent également vos attentes. Je travaille en étroite collaboration avec mes
-                clients pour comprendre leurs objectifs et créer des produits qui les aident à réussir.
+              <p className="text-lg text-gray-600 mt-4">
+                Mon objectif est clair : <span className="font-semibold">transformer vos idées en outils digitaux puissants</span>, pensés pour améliorer votre visibilité, automatiser vos processus ou offrir une expérience utilisateur fluide.
+              </p>
+              <p className="text-lg text-gray-600 mt-4">
+                Grâce à une collaboration étroite, je conçois des applications web et des sites internet qui répondent parfaitement à vos besoins, tout en respectant les meilleures pratiques du développement et du référencement naturel (SEO).
               </p>
 
               <div className="grid grid-cols-2 gap-6 my-8">
@@ -434,7 +430,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Discutons de Votre Projet</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Discutons de votre projet</h2>
             <p className="text-lg text-gray-600">
               Prêt à donner vie à votre projet ? Contactez-moi pour discuter de vos besoins et découvrir comment je peux
               vous aider.
