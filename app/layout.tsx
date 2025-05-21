@@ -75,7 +75,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body
+    <head>
+      <link href='https://fonts.googleapis.com/css?family=DM Serif Text' rel='stylesheet'/>
+      <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'/>
+    </head>
+    <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
       >
         <AppProviders>
