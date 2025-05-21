@@ -2,6 +2,10 @@
 
 import Header from "@/components/header"
 import HeroSection from "@/components/hero-section";
+import ServicesSection from "@/components/services-section";
+import GlowingOrb from "@/components/glowing-orb";
+import ContactSection from "@/components/contact-section";
+import Footer from "@/components/footer";
 
 const projects: any[] = [
   {
@@ -30,10 +34,21 @@ const projects: any[] = [
 export default function LandingPage() {
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-white">
       {/* <Header /> */}
 
       <HeroSection />
+
+      <div
+          className="max-w-[1440px] mx-auto w-full space-y-10"
+          style={{animation: "translateIn 1s ease 800ms forwards"}}
+      >
+        <ServicesSection />
+
+        <ContactSection />
+
+        <Footer />
+      </div>
     </div >
   )
 }

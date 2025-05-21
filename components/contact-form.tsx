@@ -39,18 +39,18 @@ export default function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6 h-full w-full">
         <div className="grid md:grid-cols-2 gap-6">
           <FormField
             control={form.control}
             name='name'
             render={({ field }) => (
               <FormItem>
-                <FormLabel className='flex gap-1 items-center'>
-                  Name
+                <FormLabel className='flex gap-1 items-center text-sm'>
+                    Nom complet
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="Nom complet" {...field} />
+                  <Input placeholder="ex: John Doe, Google, ..." {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -61,11 +61,11 @@ export default function ContactForm() {
             name='email'
             render={({ field }) => (
               <FormItem>
-                <FormLabel className='flex gap-1 items-center'>
+                <FormLabel className='flex gap-1 items-center text-sm'>
                   Email
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="votre@email.com" {...field} />
+                  <Input placeholder="exemple@email.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -77,15 +77,15 @@ export default function ContactForm() {
           control={form.control}
           name='message'
           render={({ field }) => (
-            <FormItem>
-              <FormLabel className='flex gap-1 items-center'>
+            <FormItem className="flex flex-col h-full">
+              <FormLabel className='flex gap-1 items-center text-sm'>
                 Message
               </FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
-                  className="resize-none min-h-44"
-                  placeholder="Décrivez votre projet"
+                  className="resize-none h-full"
+                  placeholder="Votre message..."
                 />
               </FormControl>
               <FormMessage />
@@ -93,12 +93,12 @@ export default function ContactForm() {
           )}
         />
 
-        <Button type="submit" size="lg" className="w-full cursor-pointer" disabled={isPending}>
-          {!isPending && 'Envoyer le Message'}
+        <Button type="submit" className="w-fit" disabled={isPending}>
+          {!isPending && 'Discutons de votre projet'}
           {isPending && (
             <>
               <Loader2Icon className="animate-spin" />
-              Envoie en cours
+              Envoie en cours...
             </>
           )}
         </Button>
