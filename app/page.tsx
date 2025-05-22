@@ -15,6 +15,7 @@ export default function LandingPage() {
   useEffect(() => {
     AOS.init({
       once: true,
+      disable: 'tablet'
     })
   }, [])
 
