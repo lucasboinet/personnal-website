@@ -70,13 +70,13 @@ export default function HeroSection() {
                         width={400}
                         height={431}
                         style={{animation: "translateIn 400ms ease-out 1100ms forwards"}}
-                        className="rounded-2xl absolute -bottom-12 right-10 transform rotate-8 filter saturate-150"
+                        className="rounded-2xl absolute -bottom-12 right-10 opacity-0 transform rotate-8 filter saturate-150"
                     />
                 </div>
             </div>
 
             <GlowingOrb
-                className="absolute -bottom-full transform -translate-y-1/2 left-1/2 -translate-x-1/2 w-[1300px]"
+                className="absolute -bottom-full transform -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-0 w-[1300px]"
                 style={{animation: "fadeIn 1s ease-out forwards"}}
             />
         </div>
