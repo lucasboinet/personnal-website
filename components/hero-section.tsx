@@ -12,12 +12,12 @@ export default function HeroSection() {
                     <span
                         data-aos="fade-up"
                         data-aos-delay="300"
-                        className="bg-primary/20 text-primary rounded-lg px-2.5 py-2 font-medium text-base opacity-0"
+                        className="bg-primary/20 text-primary mx-4 text-center rounded-lg px-2.5 py-2 font-medium text-base"
                     >
                         Applications web et sites internet sur mesure et performants
                     </span>
                         <p
-                            className="relative text-5xl font-dm-serif-text text-primary opacity-0"
+                            className="relative text-5xl mb-1 font-dm-serif-text text-primary"
                             data-aos="fade-up"
                             data-aos-delay="400"
                         >
@@ -25,7 +25,7 @@ export default function HeroSection() {
                             <UnderlineSlash />
                         </p>
                         <h1
-                            className="text-[40px] text-white font-bold max-w-[700px] w-full text-center opacity-0"
+                            className="text-3xl md:text-[40px] mx-4 text-white font-bold max-w-[700px] w-full text-center"
                             data-aos="fade-up"
                             data-aos-delay="500"
                         >
@@ -33,16 +33,14 @@ export default function HeroSection() {
                         </h1>
                     </div>
 
-                    <div className="flex items-center gap-6">
+                    <div className="flex flex-col md:flex-row items-center gap-6">
                         <Button
-                            className="opacity-0"
                             data-aos="fade-up"
                             data-aos-delay="600"
                         >
                             Discutons de votre projet
                         </Button>
                         <Button
-                            className="opacity-0"
                             data-aos="fade-up"
                             data-aos-delay="700"
                             variant="ghost"
@@ -56,7 +54,7 @@ export default function HeroSection() {
                     data-aos="fade-up"
                     data-aos-delay="750"
                     data-aos-offset="-100"
-                    className="absolute bottom-15 left-14 z-[1] text-base text-white opacity-0"
+                    className="relative lg:absolute -bottom-15 lg:bottom-15 left-0 w-full text-center lg:w-fit lg:left-14 z-[1] text-base text-white"
                 >
                     <span className="text-primary font-semibold">+5 ans</span>
                     {" "}
@@ -72,13 +70,13 @@ export default function HeroSection() {
                         width={400}
                         height={431}
                         style={{animation: "translateIn 400ms ease-out 1100ms forwards"}}
-                        className="rounded-2xl absolute -bottom-12 right-10 transform rotate-8 opacity-0 filter saturate-150"
+                        className="rounded-2xl absolute -bottom-12 right-10 transform rotate-8 filter saturate-150"
                     />
                 </div>
             </div>
 
             <GlowingOrb
-                className="absolute -bottom-full transform -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-0 w-[1300px]"
+                className="absolute -bottom-full transform -translate-y-1/2 left-1/2 -translate-x-1/2 w-[1300px]"
                 style={{animation: "fadeIn 1s ease-out forwards"}}
             />
         </div>
