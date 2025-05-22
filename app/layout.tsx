@@ -3,6 +3,7 @@ import "./globals.css";
 import { AppProviders } from "@/components/app-providers";
 import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
+import BreakpointIndicator from "@/components/breakpoints-debug";
 
 const metadataTitle = "Lucas Boinet | Développeur web full-stack applications & sites web";
 const metadataDescription =
@@ -67,11 +68,14 @@ export default function RootLayout({
     <head>
       <link href='https://fonts.googleapis.com/css?family=DM Serif Text' rel='stylesheet'/>
       <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'/>
+      <title>Lucas Boinet | Développeur web full-stack applications & sites web</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
         <AppProviders>
           {children}
         </AppProviders>
+        {process.env.NODE_ENV === 'development' && <BreakpointIndicator/>}
         <Toaster richColors />
         <Script
           id="schema-person"

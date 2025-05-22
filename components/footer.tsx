@@ -4,8 +4,12 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="pb-10 pt-6">
-            <div className="bg-background p-9 rounded-2xl relative overflow-hidden">
+        <div className="pb-6 pt-6">
+            <div
+                className="bg-background p-9 rounded-2xl relative overflow-hidden"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
 
                 <div className="z-[1] flex items-start justify-between w-full">
                     <div className="flex flex-col gap-6 max-w-[425px]">

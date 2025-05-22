@@ -45,7 +45,10 @@ export default function ContactForm() {
             control={form.control}
             name='name'
             render={({ field }) => (
-              <FormItem>
+              <FormItem
+                  data-aos="fade-up"
+                  data-aos-delay="550"
+              >
                 <FormLabel className='flex gap-1 items-center text-sm'>
                     Nom complet
                 </FormLabel>
@@ -60,7 +63,10 @@ export default function ContactForm() {
             control={form.control}
             name='email'
             render={({ field }) => (
-              <FormItem>
+              <FormItem
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+              >
                 <FormLabel className='flex gap-1 items-center text-sm'>
                   Email
                 </FormLabel>
@@ -77,14 +83,18 @@ export default function ContactForm() {
           control={form.control}
           name='message'
           render={({ field }) => (
-            <FormItem className="flex flex-col h-full">
+            <FormItem
+                className="flex flex-col h-full"
+                data-aos="fade-up"
+                data-aos-delay="650"
+            >
               <FormLabel className='flex gap-1 items-center text-sm'>
                 Message
               </FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
-                  className="resize-none h-full"
+                  className="resize-none min-h-[200px] lg:h-full"
                   placeholder="Votre message..."
                 />
               </FormControl>
@@ -93,7 +103,11 @@ export default function ContactForm() {
           )}
         />
 
-        <Button type="submit" className="w-fit" disabled={isPending}>
+        <Button
+            type="submit" className="w-fit" disabled={isPending}
+            data-aos="fade-up"
+            data-aos-delay="750"
+        >
           {!isPending && 'Discutons de votre projet'}
           {isPending && (
             <>

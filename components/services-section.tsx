@@ -3,14 +3,17 @@ import UnderlineSlash from "@/components/underline-slash";
 export default function ServicesSection() {
     return (
         <div
-            className="bg-background rounded-2xl p-6 transform -translate-y-[1px] relative z-20 flex flex-col items-center gap-14"
+            className="bg-background rounded-2xl p-6 transform -translate-y-[31px] relative z-20 flex flex-col items-center gap-14"
+            data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-offset="-100"
         >
             <div className="text-center">
                 <h2 className="font-bold text-white text-[32px]">Développement web <span className="text-primary font-normal font-dm-serif-text">sur mesure</span></h2>
                 <p className="text-white/60 text-base">Des solutions numériques complètes pour répondre à tous vos besoins en ligne.</p>
             </div>
 
-            <div className="flex flex-row gap-16">
+            <div className="flex flex-col-reverse md:flex-row gap-8 lg:gap-16">
                 {/** Service card */}
                 <div className="bg-primary rounded-lg p-6 space-y-6">
                     <h3 className='relative text-background font-dm-serif-text text-2xl mx-auto w-fit'>
@@ -24,7 +27,7 @@ export default function ServicesSection() {
                         Mon objectif : vous fournir une application web parfaitement intégrée à votre workflow et facile à faire évoluer.
                     </p>
 
-                    <div className="flex items-center gap-3 text-sm">
+                    <div className="flex items-center gap-3 text-sm flex-wrap">
                         <span className="bg-background text-primary rounded-[100px] px-3 py-1.5">CRM</span>
                         <span className="bg-background text-primary rounded-[100px] px-3 py-1.5">App mobile</span>
                         <span className="bg-background text-primary rounded-[100px] px-3 py-1.5">Outils</span>
@@ -46,7 +49,7 @@ export default function ServicesSection() {
                         Chaque site est pensé pour offrir la meilleure expérience utilisateur et valoriser votre image en ligne.
                     </p>
 
-                    <div className="flex items-center gap-3 text-sm">
+                    <div className="flex items-center gap-3 text-sm flex-wrap">
                         <span className="bg-primary text-background rounded-[100px] px-3 py-1.5">Site vitrine</span>
                         <span className="bg-primary text-background rounded-[100px] px-3 py-1.5">E-commerce</span>
                         <span className="bg-primary text-background rounded-[100px] px-3 py-1.5">SEO</span>
