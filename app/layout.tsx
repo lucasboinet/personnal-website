@@ -4,6 +4,7 @@ import { AppProviders } from "@/components/app-providers";
 import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
 import BreakpointIndicator from "@/components/breakpoints-debug";
+import { ReactLenis, useLenis } from 'lenis/react'
 
 const metadataTitle = "Lucas Boinet | Développeur web full-stack applications & sites web";
 const metadataDescription =
@@ -72,6 +73,15 @@ export default function RootLayout({
       <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'/>
     </head>
     <body>
+        <ReactLenis
+          root
+          options={{
+            lerp: 0.1,
+            wheelMultiplier: 1.6,
+            gestureOrientation: "vertical",
+            autoRaf: true,
+          }}
+        />
         <AppProviders>
           {children}
         </AppProviders>
