@@ -68,22 +68,10 @@ export default function RootLayout({
     <head>
       <title>Lucas Boinet | Développeur web full-stack applications & sites web</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <script src="/google-tag-manager.js"></script>
       <link href='https://fonts.googleapis.com/css?family=DM Serif Text' rel='stylesheet'/>
       <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'/>
     </head>
     <body>
-      <noscript>
-        <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KKP73BZ5"
-            height="0"
-            width="0"
-            style={{
-              display: "none",
-              visibility: "hidden"
-            }}>
-        </iframe>
-      </noscript>
         <AppProviders>
           {children}
         </AppProviders>
@@ -109,6 +97,8 @@ export default function RootLayout({
             })
           }}
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XEYYHY583"></script>
+        <script src="/google-tag.js"></script>
       </body>
     </html>
   );
