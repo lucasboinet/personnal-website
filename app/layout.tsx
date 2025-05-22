@@ -75,7 +75,6 @@ export default function RootLayout({
         <AppProviders>
           {children}
         </AppProviders>
-        {process.env.NODE_ENV === 'development' && <BreakpointIndicator/>}
         <Toaster richColors />
         <Script
           id="schema-person"
