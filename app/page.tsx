@@ -9,6 +9,7 @@ import {useEffect} from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ProjectsSection from "@/components/projects-section";
+import CustomersSlider from "@/components/customers-slider";
 
 export default function LandingPage() {
 
@@ -27,6 +28,8 @@ export default function LandingPage() {
 
       <div className="max-w-[1440px] px-[20px] md:px-[40px] mx-auto w-full space-y-20">
         <ServicesSection />
+
+        <CustomersSlider />
 
         <ProjectsSection />
 

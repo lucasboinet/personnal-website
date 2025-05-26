@@ -2,6 +2,7 @@ import GlowingOrb from "@/components/glowing-orb";
 import {Button} from "@/components/ui/button";
 import Image from "next/image";
 import UnderlineSlash from "@/components/underline-slash";
+import Link from "next/link";
 
 export default function HeroSection() {
     return (
@@ -34,19 +35,23 @@ export default function HeroSection() {
                     </div>
 
                     <div className="flex flex-col md:flex-row items-center gap-6">
-                        <Button
-                            data-aos="fade-up"
-                            data-aos-delay="600"
-                        >
-                            Discutons de votre projet
-                        </Button>
-                        <Button
-                            data-aos="fade-up"
-                            data-aos-delay="700"
-                            variant="ghost"
-                        >
-                            Voir mon portfolio
-                        </Button>
+                        <Link href="#contact">
+                            <Button
+                              data-aos="fade-up"
+                              data-aos-delay="600"
+                            >
+                                Discutons de votre projet
+                            </Button>
+                        </Link>
+                        <Link href="#projects">
+                            <Button
+                              data-aos="fade-up"
+                              data-aos-delay="700"
+                              variant="ghost"
+                            >
+                                Voir mon portfolio
+                            </Button>
+                        </Link>
                     </div>
                 </div>
 

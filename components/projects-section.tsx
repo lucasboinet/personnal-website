@@ -34,7 +34,7 @@ const projects: Project[] = [
 
 export default function ProjectsSection() {
     return (
-        <div className="flex flex-col items-center gap-14">
+        <div id="projects" className="flex flex-col items-center gap-14">
             <div
                 data-aos="fade-up"
                 data-aos-delay="100"

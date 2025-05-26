@@ -4,10 +4,11 @@ import UnderlineSlash from "@/components/underline-slash";
 import {Button} from "@/components/ui/button";
 import {CheckIcon} from "lucide-react";
 import ContactForm from "@/components/contact-form";
+import Link from "next/link";
 
 export default function ContactSection() {
     return (
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div id="contact" className="flex flex-col lg:flex-row gap-6">
             <div
                 className="flex flex-col justify-between items-center bg-background relative rounded-2xl w-full lg:max-w-[526px] h-[616px] px-6 py-[42px] overflow-hidden"
                 data-aos="fade-up"
@@ -55,15 +56,19 @@ export default function ContactSection() {
                     </li>
                 </ul>
 
-                <Button
-                    variant="ghost"
-                    className="z-[1]"
-                    data-aos="fade-up"
-                    data-aos-delay="600"
+                <Link
+                  target="_blank"
+                  href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ234fMyOY_JaOSjYoFVPK8gGHv5esLaX_6TrvRf8B1bq_uDhBoy4Su1eBXMDhZcZMXenB2-_E_9"
                 >
-                    Réserver un appel
-                </Button>
-
+                    <Button
+                      variant="ghost"
+                      className="z-[1]"
+                      data-aos="fade-up"
+                      data-aos-delay="600"
+                    >
+                        Réserver un appel
+                    </Button>
+                </Link>
 
                 <GlowingOrb
                     className="absolute -bottom-10 -right-2/6 w-5/6 blur-[150px] opacity-0"
