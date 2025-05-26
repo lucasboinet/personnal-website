@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
 import "./globals.css";
 import { AppProviders } from "@/components/app-providers";
 import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
-import BreakpointIndicator from "@/components/breakpoints-debug";
 import { ReactLenis, useLenis } from 'lenis/react'
 
 const metadataTitle = "Lucas Boinet | Développeur web full-stack applications & sites web";

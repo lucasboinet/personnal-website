@@ -5,7 +5,13 @@ import ProjectCard from "@/components/project-card";
 const projects: Project[] = [
     {
         id: 1,
-        images: ['/projects/skyloud.png'],
+        images: [
+            '/projects/skyloud.png',
+            '/projects/skyloud_monitoring.png',
+            '/projects/skyloud_task_modal.png',
+            '/projects/skyloud_tasks_kanban.png',
+            '/projects/skyloud_activity_report.png',
+        ],
         customer: 'Skyloud',
         name: 'Application de monitoring d\'infrastructure cloud et de gestion de tickets clients',
         description: "Une application de monitoring d'infrastructure cloud et de gestion de tickets clients",
@@ -23,7 +29,13 @@ const projects: Project[] = [
     },
     {
         id: 3,
-        images: ['/projects/bizbuddy.png'],
+        images: [
+            '/projects/bizbuddy.png',
+            '/projects/bizbuddy_dashboard.png',
+            '/projects/bizbuddy_customer_details.png',
+            '/projects/bizbuddy_project_details.png',
+            '/projects/bizbuddy_invoice_details.png',
+        ],
         customer: 'BizBuddy',
         name: 'Plateforme de gestion de projets et administratif pour freelances',
         description: "Une plateforme pour les freelances pour gérer leur projets, factures, devis et clients le tout dans un seul endroit",

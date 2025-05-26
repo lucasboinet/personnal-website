@@ -39,3 +39,18 @@ body {
 #clients-slider::-webkit-scrollbar {
   display: none;  /* Safari and Chrome */
 }
+
+.swiper-pagination-bullet {
+  width: 60px;
+  height: 6px;
+  opacity: 1;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: width 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: white;
+  width: 100px;
+}

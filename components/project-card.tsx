@@ -1,8 +1,17 @@
 import {Project} from "@/types/project";
 import Image from "next/image";
 import {cn} from "@/lib/utils";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from "swiper/modules";
 
 export default function ProjectCard({ project, size = "default" }: { project: Project, size?: "default" | "small" }) {
+    const pagination = {
+        clickable: true,
+        renderBullet: (_: number, className: string) => {
+            return `<span class="${className}"></span>`;
+        }
+    }
+
     return (
         <div className="bg-[#F5F8FE] p-6 rounded-3xl w-full">
             <div className={cn(
@@ -10,13 +19,29 @@ export default function ProjectCard({ project, size = "default" }: { project: Pr
                 size === 'default' && "h-[420px] lg:h-[627px]",
                 size === 'small' && "h-[300px] lg:h-[420px]",
             )}>
-                <Image
-                    src={project.images[0]}
-                    alt={project.name}
-                    width={1313}
-                    height={627}
-                    className="rounded-2xl object-cover h-full w-full"
-                />
+                <Swiper
+                    modules={[Autoplay, Pagination]}
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    loop
+                    autoplay
+                    pagination={pagination}
+                    className="rounded-2xl h-full w-full relative overflow-hidden"
+                >
+                    {project.images.map((image: string) => (
+                          <SwiperSlide>
+                              <Image
+                                src={image}
+                                alt={project.name}
+                                width={1313}
+                                height={627}
+                                key={image}
+                                className="object-cover object-top h-full w-full"
+                              />
+                          </SwiperSlide>
+                    ))}
+                    <div className="absolute inset-0 bg-linear-[180deg,rgba(0,0,0,0)_90%,_rgba(0,0,0,0.6)_100%] z-[1] select-none"></div>
+                </Swiper>
             </div>
 
             <div className="mt-4 flex flex-col gap-6">
